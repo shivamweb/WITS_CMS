@@ -44,7 +44,7 @@ class ExpensesController extends Controller
         $message = null;
         $expenses = $this->expenses->all();
 
-        return view('admin.add-expense', compact('status', 'message', 'expenses'));
+        return view('admin.add-user', compact('status', 'message', 'expenses'));
     }
     public function listexpenseforadmin()
     {
@@ -53,7 +53,7 @@ class ExpensesController extends Controller
         $message = null;
         $expenses = $this->expenses->all();
 
-        return view('admin.add-expense', compact('status', 'message', 'expenses'))->render();
+        return view('admin.add-user', compact('status', 'message', 'expenses'))->render();
     }
     public function deleteExpense($id)
 {

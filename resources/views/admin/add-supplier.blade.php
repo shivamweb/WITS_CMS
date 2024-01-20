@@ -7,8 +7,8 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="page-header-left">
-                    <h3>Expense
-                        <small>Kitaabwaala Admin</small>
+                    <h3>Supplier
+                        <small>Welcome to Cloth Management System</small>
                     </h3>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <ol class="breadcrumb pull-right">
                     <li class="breadcrumb-item"><a href="dashboard"><i data-feather="home"></i></a></li>
 
-                    <li class="breadcrumb-item active">Expense</li>
+                    <li class="breadcrumb-item active">Supplier</li>
                 </ol>
             </div>
         </div>
@@ -30,11 +30,11 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Expense</h5>
+                    <h5>Supplier</h5>
                 </div>
                 <div class="card-body">
                     <div class="btn-popup pull-right">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-original-title="test" data-target="#exampleModal">Add Expense</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-original-title="test" data-target="#exampleModal">Add Supplier</button>
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -43,7 +43,7 @@
                                         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="needs-validation" method="POST" action="{{route('addexpense')}}" >
+                                        <form class="needs-validation" method="POST" action="" >
                                             @csrf
                                             <div class="form">
                                                 <div class="form-group">
@@ -96,19 +96,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($expenses as $expense)
+                               
                                 <tr>
-                                    <td>{{$expense->id}}</td>
-                                    <td>{{$expense->book_cost}}</td>
-                                    <td>{{$expense->travelling_cost}}</td>
-                                    <td>{{$expense->labour_cost}}</td>
-                                    <td>{{$expense->warehouse_cost}}</td>  
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>  
                                     <td>
             <!-- Delete Button -->
-            <button class="btn btn-danger" onclick="deleteExpense({{$expense->id }})">Delete</button>
+            <button class="btn btn-danger" onclick="">Delete</button>
         </td>
                                 </tr>
-                                @endforeach
+                               
                             </tbody>
                         </table>
                     </div>

@@ -10,6 +10,9 @@ use App\Http\Controllers\SchoolDetailController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InquiryController;
+use App\Http\Controllers\OrderClothController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SupplierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +66,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/addtransaction', [OrderController::class, 'storeTransactionforadmin'])->name('addTransaction');
     
     Route::get('/getTotalCounts',  [AdminDetailController::class,'getTotalCount']);
-    Route::post('/add-expense', [ExpensesController::class, 'addexpense'])->name('addexpense');
+    Route::post('/add-user', [ExpensesController::class, 'adduser'])->name('adduser');
     Route::get('/viewexpense', [ExpensesController::class, 'viewexpense'])->name('viewexpense');
     Route::get('/expense', [ClassesController::class, 'listexpenseforadmin'])->name('expense');
     Route::get('/delete-expense/{id}', [ExpensesController::class, 'deleteExpense'])->name('deleteExpense');
@@ -81,4 +84,8 @@ Route::group(['prefix' => 'admin'], function () {
     
     Route::get('/manage-stock', [BookDetailController::class, 'managestockforadmin'])->name('Manage-stock');
     Route::get('/fetchDataByDate', [BookDetailController::class, 'fetchDataByDate'])->name('fetchDataByDate');
+    Route::get('/view-supplier', [SupplierController::class, 'addsupplier'])->name('addsupplier');
+    Route::get('/view-order', [OrderClothController::class, 'addorder'])->name('addorder');
+    Route::get('/view-product', [ProductController::class, 'addproduct'])->name('addproduct');
+    Route::get('/list-product', [ProductController::class, 'fetchProductListforAdmin'])->name('Product-list');
 });
