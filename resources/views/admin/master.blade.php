@@ -101,6 +101,7 @@
 
                     <ul class="sidebar-menu">
                         <li><a class="sidebar-header" href="dashboard"><i data-feather="home"></i><span>Dashboard</span></a></li>
+                        <li><a class="sidebar-header" href="/admin/view-order"><i data-feather="bar-chart"></i><span>Order</span></a></li>
                         <li><a class="sidebar-header" href="#"><i data-feather="dollar-sign"></i><span>School</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
                                 <li><a href="../../admin/Schoolview"><i class="fa fa-circle"></i>Add New School</a></li>
@@ -110,16 +111,16 @@
                         </li>
                         <li><a class="sidebar-header" href="#"><i data-feather="dollar-sign"></i><span>Products</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
-                                <li><a href="../../admin/Schoolview"><i class="fa fa-circle"></i>Add Product</a></li>
-                                <li><a href="../../admin/list-school"><i class="fa fa-circle"></i>List Products</a></li>
+                                <li><a href="../../admin/view-product"><i class="fa fa-circle"></i>Add Product</a></li>
+                                <li><a href="../../admin/list-product"><i class="fa fa-circle"></i>List Products</a></li>
 
                             </ul>
                         </li>
-                        <li><a class="sidebar-header" href="#"><i data-feather="dollar-sign"></i><span>Order History</span><i class="fa fa-angle-right pull-right"></i></a>
+                        <!-- <li><a class="sidebar-header" href="#"><i data-feather="dollar-sign"></i><span>Order History</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
                                 <li><a href="../../admin/order"><i class="fa fa-circle"></i>Received Orders</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- <li><a class="sidebar-header" href="#"><i data-feather="dollar-sign"></i><span>Inventory</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
                                 <li><a href="../../admin/view-book"><i class="fa fa-circle"></i>Add New Book</a></li>
@@ -128,13 +129,15 @@
                             </ul>
                         </li> -->
                         <li><a class="sidebar-header" href="/admin/class"><i data-feather="bar-chart"></i><span>Size</span></a></li>
-                        <li><a class="sidebar-header" href="/admin/viewexpense"><i data-feather="bar-chart"></i><span>Supllier</span></a></li>
+                        <li><a class="sidebar-header" href="/admin/viewexpense"><i data-feather="bar-chart"></i><span>User</span></a></li>
+                        <li><a class="sidebar-header" href="/admin/view-supplier"><i data-feather="bar-chart"></i><span>Supplier</span></a></li>
 
                         <li><a class="sidebar-header" href="#"><i data-feather="chrome"></i><span>Reports</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
                                 <li><a href="fetchDataByDate"><i class="fa fa-circle"></i>Stock Reports</a></li>
                                 <li><a href="currency-rates.html"><i class="fa fa-circle"></i>Sales Reports</a></li>
                                 <li><a href="taxes.html"><i class="fa fa-circle"></i>Expense Reports</a></li>
+                                <li><a href="taxes.html"><i class="fa fa-circle"></i>Order History</a></li>
                             </ul>
                         </li>
 

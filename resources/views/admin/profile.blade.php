@@ -10,7 +10,7 @@
             <div class="col-lg-6">
                 <div class="page-header-left">
                     <h3>Profile
-                        <small>Kitaabwaala Admin </small>
+                        <small>WITS CMS Admin </small>
                     </h3>
                 </div>
             </div>
