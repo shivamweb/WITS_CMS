@@ -2,22 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Expenses;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
-    private $expenses;
+    private $products;
 
-    public function __construct(Expenses $expenses)
+    public function __construct(Product $products)
     {
-        $this->expenses = $expenses;
+        $this->products = $products;
     }
     
     public function addNewProduct(Request $request)
     {
-        
         try {
             $this->validate($request, [
 
@@ -28,10 +27,11 @@ class ProductController extends Controller
                 'subcategory_id'        => 'required',
 
             ]);
+            
             $data = $request->all();
-       
+            
           $product= $this->products->AddProductDetail($data);
-       
+          dd($product);
             return redirect()->back()->with('status', 'success')->with('message', 'product Added Succesfully');
         } catch (\Exception $e) {
           
@@ -49,24 +49,24 @@ class ProductController extends Controller
         return view('admin.addProduct', compact('status', 'message'));
     }
 
-    public function listproductforadmin()
-    {
-        $status = null;
-        $message = null;
-        $prodctdetails = $this->productdetails->with('class')->get();
+    // public function listproductforadmin()
+    // {
+    //     $status = null;
+    //     $message = null;
+    //     $prodctdetails = $this->productdetails->with('class')->get();
 
-        //Pass book details to the view
-        return view('admin.list-product', compact('productdetails'))->with([
-        'chartData' => $this->getChartData($bookdetails),
-        ]);
-    }
+    //     //Pass book details to the view
+    //     return view('admin.list-product', compact('productdetails'))->with([
+    //     'chartData' => $this->getChartData($bookdetails),
+    //     ]);
+    // }
 
-    public function fetchProductListforAdmin()
-    {
-        $status = null;
-        $message = null;
-        //$schooldetails = $this->schooldetail->all();
-        return view('admin.list-product', compact('status', 'message'));
-    }
+    // public function fetchProductListforAdmin()
+    // {
+    //     $status = null;
+    //     $message = null;
+    //     //$schooldetails = $this->schooldetail->all();
+    //     return view('admin.list-product', compact('status', 'message'));
+    // }
 
 }

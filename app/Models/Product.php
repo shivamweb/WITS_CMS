@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
 
-class ProductDetails extends Model
+class Product extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -18,9 +18,9 @@ class ProductDetails extends Model
 
     ];
 
-    public function supplier()
+    public function products()
     {
-        return $this->belongsTo(Classes::class, 'product_id');
+        return $this->belongsTo(Classes::class, 'products_id');
     }
 
     public function AddProductDetail(array $addproduct)
@@ -31,14 +31,14 @@ class ProductDetails extends Model
                 'supplier_name'          => $addproduct['supplier_name'],
                 'description'       => $addproduct['description'],
                 'category_id'       => $addproduct['category_id'],
-                'category_id'       => $addproduct['category_id'],
+                'subcategory_id'       => $addproduct['subcategory_id'],
             ]);
         } catch (\Throwable $e) {
-            Log::error('[ProductDetails][AddProductDetail] Error creating supplier detail: ' . $e->getMessage());
+            Log::error('[Product][AddProductDetail] Error creating supplier detail: ' . $e->getMessage());
         }
     }
     public function product()
     {
-        return $this->belongsTo(ProductDetails::class);
+        return $this->belongsTo(Product::class);
     }
 }

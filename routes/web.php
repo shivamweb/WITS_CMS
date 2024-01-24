@@ -37,10 +37,6 @@ Route::post('/storeAdminProfile', [AdminDetailController::class, 'storeAdminProf
 
 Route::get('/view-order', [OrderClothController::class, 'addorder'])->name('addorder');
 
-Route::get('/view-product', [ProductController::class, 'addproduct'])->name('addproduct');
-Route::get('/list-product', [ProductController::class, 'fetchProductListforAdmin'])->name('Product-list');
-Route::post('/book-detail', [BookDetailController::class, 'addbookDetails'])->name('Book Detail');
-
 Route::post('/add-supplier', [SupplierController::class, 'addsupplier'])->name('addsupplier');
 Route::get('/viewsupplier', [SupplierController::class, 'viewSupplier'])->name('viewSupplier');
 Route::get('/listsupplierforadmin', [SupplierController::class, 'listsupplierforadmin'])->name('listsupplierforadmin');
@@ -55,7 +51,7 @@ Route::get('/view-userdetail/{uuid}', [UserController::class, 'viewUserDetails']
 Route::get('/view-order', [OrderClothController::class, 'addorder'])->name('addorder');
 
 Route::get('/view-product', [ProductController::class, 'addproduct'])->name('addproduct');
-Route::post('/add-product', [UserController::class, 'addNewProduct'])->name('addNewProduct');
+Route::post('/addProduct', [ProductController::class, 'addNewProduct'])->name('addNewProduct');
 Route::get('/list-product', [ProductController::class, 'fetchProductListforAdmin'])->name('Product-list');
 
 Route::get('/admin-logout', [AdminDetailController::class, 'Adminlogout'])->name('admin-logout');

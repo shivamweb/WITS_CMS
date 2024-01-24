@@ -33,7 +33,7 @@
                 </div>
                 <div class="card-body">
                     <div class="digital-add needs-validation">
-                        <form id="productForm" method="POST" action="" enctype="multipart/form-data">
+                        <form id="productForm" method="POST" action="{{ route('addNewProduct') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="title" class="col-form-label pt-0"><span>*</span>
@@ -43,26 +43,31 @@
                             <div class="form-group">
                                 <label for="title" class="col-form-label pt-0"><span>*</span>
                                     Supplier Name</label>
-                                <input class="form-control" name="supplier" id="supplier" type="text">
+                                <input class="form-control" name="supplier_name" id="supplier_name" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="title" class="col-form-label pt-0"><span>*</span>
                                     Product Discription</label>
-                                <textarea class="form-control" name="name" id="name" type="text"></textarea>
+                                <textarea class="form-control" name="description" id="description" type="text"></textarea>
                             </div>    
                             <div class="form-group">
                                 <label for="category_id" class="col-form-label pt-0"><span>*</span>Category</label>
                                 <select class="custom-select form-control" name="category_id" id="category_id">
                                     
-                                    <option value=""></option>
+                                    <option value="test">test</option>
                                     
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="subcategory_id" class="col-form-label pt-0"><span>*</span>SubCategory</label>
                                 <select class="custom-select form-control" id="subcategory_id" name="subcategory_id">
+                                <option value="test">test</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                        <button type="submit" id="submit-button" class="btn btn-primary">Add</button>
+                                        <!-- <button type="button" class="btn btn-primary">Discard</button> -->
+                                    </div>
                             <!-- <div class="form-group">
                                 <label for="title" class="col-form-label pt-0"><span>*</span>
                                     Title</label>
