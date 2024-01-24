@@ -57,7 +57,7 @@
                         <td>{{$schooldetail->mobile_number}}</td>
                         <td>
                             <div>
-                                <a href="/admin/view-schooldetail/{{$schooldetail->uuid}}"><i class="fa fa-eye"></i></a>
+                                <a href="/view-schooldetail/{{$schooldetail->uuid}}"><i class="fa fa-eye"></i></a>
 
                             </div>
                         </td>

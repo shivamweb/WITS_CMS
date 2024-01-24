@@ -43,12 +43,15 @@
                                         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="needs-validation" method="POST" action="{{ route('addClass') }}" enctype="multipart/form-data">
+                                        <form class="needs-validation" method="POST" action="{{ route('add-new-size') }}" enctype="multipart/form-data">
                                             @csrf
                                             <div class="form">
                                                 <div class="form-group">
                                                     <label for="class" class="mb-1">Size :</label>
-                                                    <input class="form-control" name="class" id="class" type="text">
+                                                   
+                                                    <div class="row">
+                                                    <input class="form-control" name="size" id="class" type="text">
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -67,17 +70,16 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Class</th>
-                                    <th>Delete</th>
+                                    <th>Size</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($classes as $class)
+                                @foreach($sizes as $size)
                                 <tr>
-                                    <td>{{$class->id}}</td>
-                                    <td>{{$class->class}}</td>
+                                    <td>{{$size->id}}</td>
+                                    <td>{{$size->size}}</td>
                                     <td>
-                                        <button class="btn btn-danger delete-class" data-id="{{ $class->id }}">Delete</button>
+                                        <button class="btn btn-danger delete-class" data-id="{{$size->id}}">Delete</button>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -111,7 +113,7 @@
         }).then((result) => {
             if (result.isConfirmed) {
                 // If confirmed, redirect to the deleteClass route
-                window.location.href = "{{ url('/admin/delete-class') }}" + '/' + classId;
+                window.location.href = "{{ url('/delete-Size') }}" + '/' + classId;
             }
         });
     });

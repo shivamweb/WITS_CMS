@@ -41,7 +41,7 @@
                                     <div class="add-product">
                                         <div class="row">
                                             <div class="col-xl-9 xl-50 col-sm-6 col-9">
-                                                <div class="item"><img id="imgPreview1" src="../assets/images/default/book.jpg" alt="" class="blur-up lazyloaded" style="width: 104%;height:378px;"></div>
+                                                <div class="item"><img id="imgPreview1" src="../assets/images/default/no image.jpg" alt="" class="blur-up lazyloaded" style="width: 104%;height:378px;"></div>
                                             </div>
                                             <div class="col-xl-3 xl-50 col-sm-6 col-3">
                                                 <ul class="file-upload-product">
@@ -54,18 +54,18 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-7">
-
+                                <br>
                                     <div class="form">
                                         <div class="form-group mb-3  row">
                                             <div class="col-xl-3 col-sm-4 mb-0">
-                                                <label for="validationCustom01">Book Name :</label>
+                                                <label for="validationCustom01">Item Name :</label>
                                             </div>
                                             <div class="col-xl-8 col-sm-7">
                                                 <input class="form-control " id="book_name" name="book_name" type="text" required="" style="border-radius:20px;">
 
                                             </div>
                                         </div>
-                                        <div class="form-group mb-3  row">
+                                        <!-- <div class="form-group mb-3  row">
                                             <div class="col-xl-3 col-sm-4 mb-0">
                                                 <label for="validationCustom01">Price:</label>
                                             </div>
@@ -73,7 +73,7 @@
                                                 <input class="form-control " id="price" name="price" type="text" required=""style="border-radius:20px;">
 
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="form-group mb-3 row">
                                             <div class="col-xl-3 col-sm-4 mb-0">
                                                 <label for="validationCustom02">Part :</label>
@@ -133,7 +133,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-xl-3 col-sm-4 mb-0">
-                                                <label>Total Books :</label>
+                                                <label>Total Quantity :</label>
                                             </div>
                                             <div class="col-xl-9 col-xl-8 col-sm-7 ps-0">
                                                 <fieldset class="qty-box ">

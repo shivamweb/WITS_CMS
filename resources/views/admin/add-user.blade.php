@@ -39,37 +39,57 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title f-w-600" id="exampleModalLabel">Add Expense</h5>
+                                        <h5 class="modal-title f-w-600" id="exampleModalLabel">Add User</h5>
                                         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="needs-validation" method="POST" action="{{route('addexpense')}}" >
+                                        <form class="needs-validation" method="POST" action="{{route('addNewUser')}}">
                                             @csrf
                                             <div class="form">
                                                 <div class="form-group">
-                                                    <label for="class" class="mb-1">Book Cost :</label>
-                                                    <input class="form-control" name="book_cost" id="book_cost" type="text">
+                                                    <label for="class" class="mb-1">School Name :</label>
+                                                    <input class="form-control" name="name" id="name" type="text">
                                                 </div>
 
                                             </div>
                                             <div class="form">
                                                 <div class="form-group">
-                                                    <label for="class" class="mb-1">Travelling Cost :</label>
-                                                    <input class="form-control" name="travelling_cost" id="travelling_cost" type="text">
+                                                    <label for="class" class="mb-1">Email Id :</label>
+                                                    <input class="form-control" name="email" id="email" type="text">
                                                 </div>
 
                                             </div>
                                             <div class="form">
                                                 <div class="form-group">
-                                                    <label for="class" class="mb-1">Labour Cost :</label>
-                                                    <input class="form-control" name="labour_cost" id="labour_cost" type="text">
+                                                    <label for="class" class="mb-1">Mobile Number :</label>
+                                                    <input class="form-control" name="mobile_number" id="mobile_number" type="text">
                                                 </div>
 
                                             </div>
                                             <div class="form">
                                                 <div class="form-group">
-                                                    <label for="class" class="mb-1">Warehouse Cost :</label>
-                                                    <input class="form-control" name="warehouse_cost" id="warehouse_cost" type="text">
+                                                    <label for="class" class="mb-1">City :</label>
+                                                    <input class="form-control" name="city" id="city" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <div class="form-group">
+                                                    <label for="class" class="mb-1">State :</label>
+                                                    <input class="form-control" name="state" id="state" type="text">
+                                                </div>
+
+                                            </div>
+                                            <div class="form">
+                                                <div class="form-group">
+                                                    <label for="class" class="mb-1">Address :</label>
+                                                    <textarea class="form-control" name="address" id="address" type="text"></textarea>
+                                                </div>
+
+                                            </div>
+                                            <div class="form">
+                                                <div class="form-group">
+                                                    <label for="class" class="mb-1">Pin Code :</label>
+                                                    <input class="form-control" name="pin_code" id="pin_code" type="text">
                                                 </div>
 
                                             </div>
@@ -80,7 +100,7 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                     <div class="card-body order-datatable">
@@ -88,25 +108,32 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Book Cost</th>
-                                    <th>Travelling Cost</th>
-                                    <th>Labour Cost</th>
-                                    <th>Warehouse Cost</th>
-                                    <th>Action</th>
+                                    <th>School Name</th>
+                                    <th>Email Id</th>
+                                    <th>Mobile Number</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Address</th>
+                                    <th>Pin Code</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($expenses as $expense)
+                                @foreach($users as $user)
                                 <tr>
-                                    <td>{{$expense->id}}</td>
-                                    <td>{{$expense->book_cost}}</td>
-                                    <td>{{$expense->travelling_cost}}</td>
-                                    <td>{{$expense->labour_cost}}</td>
-                                    <td>{{$expense->warehouse_cost}}</td>  
+                                    <td>{{$user->id}}</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->mobile_number}}</td>
+                                    <td>{{$user->state}}</td>
+                                    <td>{{$user->address}}</td>
+                                    <td>{{$user->pin_code}}</td>
+                                    <td>{{$user->city}}</td>
                                     <td>
-            <!-- Delete Button -->
-            <button class="btn btn-danger" onclick="deleteExpense({{$expense->id }})">Delete</button>
-        </td>
+                                    <div>
+                                        <a href="/view-userdetail/{{$user->uuid}}"><i class="fa fa-eye"></i></a>
+                                    </div>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -123,22 +150,22 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    function deleteExpense(expenseId) {
-        // Show a confirmation dialog
+    $(document).on('click', '.delete-user', function() {
+        var userId = $(this).data('id');
         Swal.fire({
             title: 'Are you sure?',
             text: 'You won\'t be able to revert this!',
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                // If the user confirms, redirect to the delete route
-                window.location.href = '/admin/delete-expense/' + expenseId;
+                // If confirmed, redirect to the deleteClass route
+                window.location.href = "" + '/' + userId;
             }
         });
-    }
+    });
 </script>
 @endsection

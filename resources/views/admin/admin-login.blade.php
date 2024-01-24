@@ -172,10 +172,6 @@
                                         </div>
                                         <div class="form-terms">
                                             <div class="custom-control custom-checkbox me-sm-2">
-                                                <div class="form-check">
-                                                    <input class="form-check-input custom-control-input" type="checkbox" value="" id="customControlAutosizing">
-                                                    <label class="form-check-label" for="customControlAutosizing">Remember me</label>
-                                                </div>
                                                 <a href="javascript:void(0)" class="btn btn-default forgot-pass">lost your password</a>
                                             </div>
                                         </div>

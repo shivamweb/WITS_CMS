@@ -53,7 +53,7 @@ class AdminDetailController extends Controller
                 return redirect('/admin-login')->with('status', 'error')->with('message', 'Invalid credential');
             }
             $this->storeAdminSession($admin);
-            return redirect('/admin/profile');
+            return redirect('/profile');
         } catch (\Exception $e) {
 
             Log::error('[AdminDetailController][signin] Error Login admin ' . 'Request=' . $request . ', Exception=' . $e->getMessage());

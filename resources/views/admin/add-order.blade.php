@@ -43,11 +43,11 @@
                                         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="needs-validation" method="POST" action="{{ route('addClass') }}" enctype="multipart/form-data">
+                                        <form class="needs-validation" method="POST" action="" enctype="multipart/form-data">
                                             @csrf
                                             <div class="form">
                                                 <div class="form-group">
-                                                    <label for="class" class="mb-1">Order :</label>
+                                                    <label for="class" class="mb-1">Order Information :</label>
                                                     <input class="form-control" name="class" id="class" type="text">
                                                 </div>
 

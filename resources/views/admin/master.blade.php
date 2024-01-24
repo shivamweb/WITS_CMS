@@ -101,18 +101,18 @@
 
                     <ul class="sidebar-menu">
                         <li><a class="sidebar-header" href="dashboard"><i data-feather="home"></i><span>Dashboard</span></a></li>
-                        <li><a class="sidebar-header" href="/admin/view-order"><i data-feather="bar-chart"></i><span>Order</span></a></li>
-                        <li><a class="sidebar-header" href="#"><i data-feather="dollar-sign"></i><span>School</span><i class="fa fa-angle-right pull-right"></i></a>
+                        <li><a class="sidebar-header" href="/view-order"><i data-feather="bar-chart"></i><span>Order</span></a></li>
+                        <li><a class="sidebar-header" href="#"><i data-feather="disc"></i><span>School</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
-                                <li><a href="../../admin/Schoolview"><i class="fa fa-circle"></i>Add New School</a></li>
-                                <li><a href="../../admin/list-school"><i class="fa fa-circle"></i>All School List</a></li>
+                                <li><a href="../../Schoolview"><i class="fa fa-circle"></i>Add New School</a></li>
+                                <li><a href="../../list-school"><i class="fa fa-circle"></i>All School List</a></li>
 
                             </ul>
                         </li>
-                        <li><a class="sidebar-header" href="#"><i data-feather="dollar-sign"></i><span>Products</span><i class="fa fa-angle-right pull-right"></i></a>
+                        <li><a class="sidebar-header" href="#"><i data-feather="box"></i><span>Products</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
-                                <li><a href="../../admin/view-product"><i class="fa fa-circle"></i>Add Product</a></li>
-                                <li><a href="../../admin/list-product"><i class="fa fa-circle"></i>List Products</a></li>
+                                <li><a href="../../view-product"><i class="fa fa-circle"></i>Add Product</a></li>
+                                <li><a href="../../list-product"><i class="fa fa-circle"></i>List Products</a></li>
 
                             </ul>
                         </li>
@@ -128,11 +128,12 @@
                                 <li><a href="../../admin/manage-stock"><i class="fa fa-circle"></i>Manage Stocks</a></li>
                             </ul>
                         </li> -->
-                        <li><a class="sidebar-header" href="/admin/class"><i data-feather="bar-chart"></i><span>Size</span></a></li>
-                        <li><a class="sidebar-header" href="/admin/viewexpense"><i data-feather="bar-chart"></i><span>User</span></a></li>
-                        <li><a class="sidebar-header" href="/admin/view-supplier"><i data-feather="bar-chart"></i><span>Supplier</span></a></li>
+                        <li><a class="sidebar-header" href="/size"><i data-feather="maximize-2"></i><span>Size</span></a></li>
+                        <li><a class="sidebar-header" href="/class"><i data-feather="maximize-2"></i><span>Category</span></a></li>
+                        <li><a class="sidebar-header" href="/viewUser"><i data-feather="user"></i><span>User</span></a></li>
+                        <li><a class="sidebar-header" href="/viewsupplier"><i data-feather="truck"></i><span>Supplier</span></a></li>
 
-                        <li><a class="sidebar-header" href="#"><i data-feather="chrome"></i><span>Reports</span><i class="fa fa-angle-right pull-right"></i></a>
+                        <li><a class="sidebar-header" href="#"><i data-feather="book"></i><span>Reports</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
                                 <li><a href="fetchDataByDate"><i class="fa fa-circle"></i>Stock Reports</a></li>
                                 <li><a href="currency-rates.html"><i class="fa fa-circle"></i>Sales Reports</a></li>
@@ -143,10 +144,10 @@
 
                         <li><a class="sidebar-header" href="#"><i data-feather="settings"></i><span>Settings</span><i class="fa fa-angle-right pull-right"></i></a>
                             <ul class="sidebar-submenu">
-                                <li><a href="../../admin/profile"><i class="fa fa-circle"></i>Profile</a></li>
+                                <li><a href="../../profile"><i class="fa fa-circle"></i>Profile</a></li>
                             </ul>
                         </li>
-                        <li><a class="sidebar-header" href="/admin/admin-logout"><i data-feather="log-in"></i><span>Logout</span></a>
+                        <li><a class="sidebar-header" href="/admin-logout"><i data-feather="log-in"></i><span>Logout</span></a>
                         </li>
                     </ul>
                 </div>

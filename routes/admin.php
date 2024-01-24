@@ -84,8 +84,11 @@ Route::group(['prefix' => 'admin'], function () {
     
     Route::get('/manage-stock', [BookDetailController::class, 'managestockforadmin'])->name('Manage-stock');
     Route::get('/fetchDataByDate', [BookDetailController::class, 'fetchDataByDate'])->name('fetchDataByDate');
-    Route::get('/view-supplier', [SupplierController::class, 'addsupplier'])->name('addsupplier');
+ 
     Route::get('/view-order', [OrderClothController::class, 'addorder'])->name('addorder');
     Route::get('/view-product', [ProductController::class, 'addproduct'])->name('addproduct');
     Route::get('/list-product', [ProductController::class, 'fetchProductListforAdmin'])->name('Product-list');
+    Route::post('/add-supplier', [SupplierController::class, 'addsupplier'])->name('addsupplier');
+    Route::get('/viewsupplier', [SupplierController::class, 'viewSupplier'])->name('viewSupplier');
+    Route::get('/listsupplierforadmin', [SupplierController::class, 'listsupplierforadmin'])->name('listsupplierforadmin');
 });
